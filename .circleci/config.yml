@@ -374,8 +374,8 @@ workflows:
       - setup:
           context: org-global
           filters:
-            # tags:
-            #   only: /.*/
+            tags:
+              only: /.*/
             branches:
               ignore: 
                 - /feature*/
@@ -385,8 +385,8 @@ workflows:
           requires:
             - setup
           filters:
-            # tags:
-            #   only: /.*/
+            tags:
+              only: /.*/
             branches:
               ignore: 
                 - /feature*/
