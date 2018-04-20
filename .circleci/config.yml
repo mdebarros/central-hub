@@ -168,6 +168,9 @@ jobs:
       - run:
           name: Execute tests
           command: npm -s run test > ./test/results/test.txt
+      - run:
+          name: Print tests results
+          command: cat ./test/results/test.txt
       - store_artifacts:
           path: ./test/results
           prefix: test
