@@ -153,7 +153,9 @@ jobs:
           command: *defaults_awsCliDependencies
       - checkout
       - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          keys:
+           - dependency-cache-{{ checksum "package.json" }}
+           - dependency-cache-
       - run:
           name: Install tape, tapes and tap-xunit
           command: npm install -g tape tapes tap-xunit
